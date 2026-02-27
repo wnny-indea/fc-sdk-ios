@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - publish
+      - ci-test
     tags:
       - "v*.*.*"
   workflow_dispatch:
@@ -93,6 +94,8 @@ jobs:
           - FlashcatRUM
           - FlashcatCrashReporting
           - FlashcatWebViewTracking
+          - FlashcatLogs
+          - FlashcatSessionReplay
     steps:
       - uses: actions/checkout@v4
 
